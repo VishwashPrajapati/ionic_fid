@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-left">Back</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='recipes'></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card *ngFor="let data of loadedDish" fullscreen>
+    <ion-card-header>
+      <ion-card-title class="ion-padding">{{data.name}}</ion-card-title>
+      <img src="{{data.image}}" alt="{{data.name}}">
+      <ion-card-subtitle class="ion-text-right">{{data.price}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{data.discription}}
+    </ion-card-content>
+  </ion-card>
+  <ion-button class="ion-margin" expand="block" color="primary">Order Now</ion-button>
+</ion-content>
+
+
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/recipes">
+      <ion-icon name="grid-outline"></ion-icon>
+      <ion-label>Recipes</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

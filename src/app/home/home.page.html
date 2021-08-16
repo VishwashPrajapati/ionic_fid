@@ -1,0 +1,61 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Food in Dabba</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+  <ion-title class="ion-text-center ion-margin-top">Todays Speciality</ion-title>
+  <ion-slides [options]="slidesOptions">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header class="ion-no-padding">
+          <div class="main">
+            <img src="../../assets/images/Baahubali_Thali.jpg" alt="">
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title class="ion-margin-top">Bahubali Thali</ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header class="ion-no-padding">
+          <div class="main">
+            <img src="../../assets/images/Baahubali_Thali.jpg" alt="">
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title class="ion-margin-top">Bahubali Thali</ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header class="ion-no-padding">
+          <div class="main">
+            <img src="../../assets/images/Baahubali_Thali.jpg" alt="">
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title class="ion-margin-top">Bahubali Thali</ion-card-title>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+    <ion-tab-button routerLink="/recipes">
+      <ion-icon name="grid-outline"></ion-icon>
+      <ion-label>Recipes</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-left">Menu</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='home'></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-searchbar></ion-searchbar>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" *ngFor="let dish of dishes">
+        <ion-card>
+          <img src="./image{{ dish.image }}" />
+          <ion-card-header>
+            <!-- <ion-card-subtitle>{{ dish.name }}</ion-card-subtitle> -->
+            <ion-card-title>{{ dish.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            {{ dish.discription }}
+            <br>
+            {{ dish.price }}
+          </ion-card-content>
+          <ion-grid>
+            <ion-row class="ion-text-center">
+              <ion-col size="6">
+                <ion-button [routerLink]="['/recipes', dish.id]" color="light"><ion-icon name="eye-outline" slot="start"></ion-icon> View</ion-button>
+              </ion-col>
+              <ion-col size="6">
+                <ion-button color="tertiary"><ion-icon name="add-outline" slot="start"></ion-icon> Add</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

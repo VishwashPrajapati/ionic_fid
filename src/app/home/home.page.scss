@@ -1,0 +1,16 @@
+ion-header{
+  ion-toolbar{
+    --background: crimson;
+    ion-title{
+      --color: white;
+    }
+  }
+}
+ion-content{
+  ion-slides{
+    ion-card{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
